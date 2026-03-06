@@ -1,0 +1,327 @@
+body {
+            background-color: #212121;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Top Header Styles */
+        .custom-box {
+            border: 1px solid #555;
+            color: #fff;
+            padding: 2px 12px;
+            font-size: 0.8rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        /* Navbar Styles */
+        .main-navbar .nav-link {
+            padding: 15px 40px;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            font-family: 'Georgia', serif;
+            transition: 0.3s ease;
+        }
+        .text-pink {
+            color: #e91e63 !important;
+        }
+        .main-navbar .nav-link:hover {
+            color: #e91e63 !important;
+        }
+
+        /* Slider Styles */
+        .carousel-item img {
+            height: 600px;
+            object-fit: cover;
+        }
+        
+        .feature-item {
+            position: relative;
+            height: auto;
+            max-height: 400px; 
+            overflow: hidden;
+        }
+
+        .feature-item img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .feature-caption {
+            position: absolute;
+            bottom: 20%;
+            left: 10%;
+            z-index: 10;
+            color: white;
+            text-align: left;
+        }
+
+        .center-caption {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            bottom: auto;
+        }
+
+        .feature-item p {
+            font-family: 'Georgia', serif;
+            font-size: 0.9rem !important;
+        }
+
+        .feature-item h2 {
+            font-size: 2.2rem;
+            margin-bottom: 0;
+            line-height: 1;
+        }
+
+        .feature-item .btn {
+            font-size: 0.8rem;
+            text-transform: capitalize;
+        }
+
+        
+        @media (min-width: 768px) {
+            .feature-item.col-md-3 {
+                flex: 0 0 25%;
+                max-width: 25%;
+            }
+            .feature-item.col-md-6 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+       
+.tracking-widest {
+    letter-spacing: 3px;
+    font-family: 'Georgia', serif;
+}
+
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: #888;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid #333;
+}
+
+
+.active-pink {
+    background-color: #f08090 !important; 
+    color: white !important;
+    box-shadow: 0 0 15px rgba(240, 128, 144, 0.4);
+    border: none;
+}
+
+.category-item:hover .icon-circle {
+    transform: translateY(-5px);
+    border-color: #e91e63;
+}
+
+.category-item p {
+    letter-spacing: 1px;
+    font-size: 0.75rem;
+}
+
+
+.text-pink {
+    color: #e91e63 !important;
+}
+
+.featured-products-wrapper {
+    background-color: #050505; 
+    width: 100%;
+}
+
+.tracking-widest {
+    letter-spacing: 4px;
+    font-family: 'Georgia', serif;
+}
+
+
+.divider-line {
+    width: 60px;
+    height: 1px;
+    background-color: #e91e63;
+    position: relative;
+}
+
+
+.icon-circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #1a1a1a; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    border: 1px solid #222;
+}
+
+
+.active-pink {
+    background-color: #f08090 !important; 
+    color: white !important;
+    border: none;
+    box-shadow: 0 0 20px rgba(240, 128, 144, 0.3);
+}
+
+.active-pink img {
+    filter: none !important; 
+}
+
+
+.category-item:hover .icon-circle {
+    border-color: #e91e63;
+    transform: translateY(-5px);
+}
+
+.text-pink {
+    color: #e91e63 !important;
+}
+
+.small {
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+}
+
+.featured-products-wrapper {
+    background-color: #000000;
+    width: 100%;
+}
+
+
+.glass-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #222 0%, #111 100%); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #222; 
+    box-shadow: inset 0 0 15px rgba(255,255,255,0.05); 
+    color: #ffffff;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+.active-pink {
+    background: #f08291 !important; 
+    border: none;
+    box-shadow: 0 0 25px rgba(240, 130, 145, 0.5); 
+    color: white !important;
+}
+
+
+.category-item:hover .glass-circle {
+    transform: scale(1.1);
+    border-color: #f08291;
+}
+
+
+.category-title {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    font-family: 'Georgia', serif;
+    text-transform: uppercase;
+}
+
+.active-text {
+    color: #f08291 !important;
+}
+
+
+.divider-line {
+    width: 50px;
+    height: 1px;
+    background-color: #f08291;
+}
+/* Testimonial Section Styles */
+.testimonial-section {
+    border-top: 1px solid #eee;
+}
+
+.divider-line-pink {
+    width: 60px;
+    height: 1px;
+    background-color: #f08291;
+}
+
+/* গোল ইমেজ স্টাইল */
+.client-img-wrapper {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #f1f1f1; /* ইমেজের চারপাশের গ্রে বর্ডার */
+}
+
+.client-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ক্লায়েন্টের নাম ও টেক্সট */
+.client-card h5 {
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.client-text {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.6;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.short-divider {
+    width: 30px;
+    height: 1px;
+    background-color: #f08291;
+    margin: 0 auto;
+}
+
+/* নেভিগেশন বাটন (Arrows) */
+.nav-btn-pink {
+    background-color: #f08291;
+    color: white;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.nav-btn-pink:hover {
+    background-color: #e91e63;
+    transform: scale(1.1);
+}
