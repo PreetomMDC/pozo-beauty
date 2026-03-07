@@ -1,23 +1,43 @@
-body { background-color: #212121; color: white; margin: 0; padding: 0; }
+:root { --base-color: #212121; --white: #ffffff; --pink: #ff6c8d; }
+body { background-color: var(--base-color); color: var(--white); margin: 0; padding: 0; }
+
+
+.page-title{padding-bottom: 20px;position: relative;}
+.page-title::before{content: '';position: absolute; bottom: 0; left: 0;right: 0; width: 150px; height: 1px; background-color: var(--pink);margin-left: auto;margin-right: auto;}
+.page-title::after{content: '';position: absolute; bottom: -5px; left: 0;right: 0; width: 60px; height: 1px; background-color: var(--pink);margin-left: auto;margin-right: auto;}
+
+
 /* Top Header Styles */
-.custom-box { border: 1px solid #555; color: #fff; padding: 2px 12px; font-size: 0.8rem; font-weight: 300; text-transform: uppercase; cursor: pointer; }
+.custom-box { border: 1px solid #555; color: var(--white); padding: 2px 12px; font-size: 0.8rem; font-weight: 300; text-transform: uppercase; cursor: pointer; }
 /* Navbar Styles */
 .main-navbar .nav-link { padding: 15px 40px; font-size: 14px; font-weight: 700; letter-spacing: 1px; font-family: 'Georgia', serif; transition: 0.3s ease; }
-.text-pink { color: #e91e63 !important; }
-.main-navbar .nav-link:hover { color: #e91e63 !important; }
+.text-pink { color: var(--pink) !important; }
+.btn-pink { background-color: var(--pink); border-color: var(--pink); color: var(--white); }
+.btn-pink:hover { background-color: #666; border-color: #666; }
+.main-navbar .nav-link:hover { color: var(--pink) !important; }
 /* Slider Styles */
 .carousel-item img { height: 600px; object-fit: cover; }
-.feature-item { position: relative; height: auto; max-height: 400px; overflow: hidden; }
-.feature-item img { height: 100%; width: 100%; object-fit: cover; transition: transform 0.3s ease; }
-.feature-item:hover img { transform: scale(1.05); }
+.feature-item { overflow: hidden; }
 .feature-caption { position: absolute; bottom: 20%; left: 10%; z-index: 10; color: white; text-align: left; }
 .center-caption { top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; bottom: auto; }
 .feature-item p { font-family: 'Georgia', serif; font-size: 0.9rem !important; }
 .feature-item h2 { font-size: 2.2rem; margin-bottom: 0; line-height: 1; }
 .feature-item .btn { font-size: 0.8rem; text-transform: capitalize; }
-@media (min-width: 768px) {
-    .feature-item.col-md-3 { flex: 0 0 25%; max-width: 25%; }
-    .feature-item.col-md-6 { flex: 0 0 50%; max-width: 50%; }
+/* Container to hold the image and the hover box */
+.feature-item { cursor: pointer; overflow: hidden; /* Keeps the hover box from bleeding out during animation */ }
+/* The white border box */
+.hover-box-design { position: absolute; /* Create a 20px gap from all edges */
+    top: 10px; left: 10px; right: 10px; bottom: 10px; border: 1px solid #FFF; z-index: 2; /* Start hidden and small */
+    opacity: 0; transform: scale(0.7); transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); /* Smooth "out" timing */
+    pointer-events: none; /* Allows clicking "through" the box to the image */ }
+/* On Hover: Show and Scale up */
+.feature-item:hover .hover-box-design { opacity: 1; transform: scale(1); }
+.custom-feature-img { width: 100%; height: 300px; /* Set your desired uniform height here */
+    object-fit: cover; /* This crops the image to fill the area without stretching */
+    display: block; }
+/* Responsive adjustment: reduce height on mobile so they aren't too tall when stacked */
+@media (max-width: 768px) {
+ .custom-feature-img { height: 250px; }
  }
 .tracking-widest { letter-spacing: 3px; font-family: 'Georgia', serif; }
 .icon-circle { width: 80px; height: 80px; border-radius: 50%; background-color: #222; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: #888; cursor: pointer; transition: all 0.3s ease; border: 1px solid #333; }
